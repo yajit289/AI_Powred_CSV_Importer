@@ -1,0 +1,11 @@
+Created At,Full Name,Email Address,Phone Number,Company,City,State,Country,Lead Owner,Lead Status,Project,Notes,Possession Time,Description
+2026-05-13 14:20:48,John Doe,john.doe@example.com,+91 9876543210,GrowEasy,Mumbai,Maharashtra,India,test@gmail.com,Interested,Meridian Tower,Client is asking to reschedule demo,2027-01-15,Premium customer
+2026-05-13 14:25:30,Sarah Johnson,sarah.johnson@example.com,+91 9876543211,Tech Solutions,Bangalore,Karnataka,India,test@gmail.com,Customer didn't answer,Eden Park,Will call again next week,2027-03-10,Busy during office hours
+2026-05-13 14:30:15,Rajesh Patel,rajesh.patel@example.com,+91 9876543212,Startup Inc,Delhi,Delhi,India,test@gmail.com,Not Interested,,Requested no further follow-up,,Budget issues
+2026-05-13 14:35:22,Priya Singh,priya.singh@example.com,+91 9876543213,Enterprise Corp,Pune,Maharashtra,India,test@gmail.com,Sale Completed,Varah Swamy,Onboarding in progress,2026-12-20,Payment completed
+2026-05-13 14:40:10,Amit Kumar,"amit@gmail.com,amit.office@gmail.com",+1 2125551234,NextSoft,New York,New York,USA,test@gmail.com,Interested,Meridian Tower,Multiple email addresses,2027-02-05,NRI customer
+2026-05-13 14:45:30,Sneha Patel,sneha@gmail.com,"+91 9876543215,+91 9988776655",DataWorks,Ahmedabad,Gujarat,India,test@gmail.com,Interested,Sarjapur Plots,Multiple mobile numbers,,Investment enquiry
+2026-05-13 14:50:15,Rohan Singh,,+44 7700900112,CloudEdge,London,England,UK,test@gmail.com,Interested,Eden Park,Missing email,2028-04-01,International lead
+2026-05-13 14:55:42,Neha Gupta,neha@gmail.com,,GrowEasy,Hyderabad,Telangana,India,test@gmail.com,Interested,,Missing mobile,,Requested brochure
+2026-05-13 15:00:18,Vikram Joshi,,,TechNova,Chennai,Tamil Nadu,India,test@gmail.com,Interested,Meridian Tower,No contact information,,Should be skipped
+2026-05-13 15:05:30,Pooja Sharma,"pooja@gmail.com,pooja.work@gmail.com","+61 412345678,+61 498765432",CloudEdge,Sydney,New South Wales,Australia,test@gmail.com,Customer didn't answer,Unknown Project,Multiple contacts,2027-09-18,Customer living abroad
