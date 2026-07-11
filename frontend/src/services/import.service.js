@@ -9,6 +9,6 @@ export const importCsvFile = async (file) => {
   const formData = new FormData();
   formData.append("file", file);
 
-  const response = await api.post(`${process.env.NEXT_PUBLIC_API_URL}/api/import`, formData);
+  const response = await api.post("/api/import", formData);
   return response.data;
 };
