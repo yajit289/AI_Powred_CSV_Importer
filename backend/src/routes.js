@@ -5,6 +5,6 @@ import { importCSV } from "./controllers/import.controller.js";
 
 const router = Router()
 
-router.post("/api/import",upload.single("file"),importCSV)
+router.post("/import",upload.single("file"),importCSV)
 
 export default router
