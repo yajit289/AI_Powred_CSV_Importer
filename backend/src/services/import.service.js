@@ -4,6 +4,8 @@ import { mapHeaders } from "./mappingServices.js";
 import { mapUnknownHeaders, extractCRMRecords } from "./ai.service.js"
 import { transformRecords } from "./transform.service.js";
 import { createBatches } from "./batch.service.js";
+import { validateRecords } from "./validation.service.js";
+
 export const importLeads = async (buffer) => {
   try {
     //prase csv
@@ -18,8 +20,10 @@ export const importLeads = async (buffer) => {
     const finalMapping = { ...mappedHeaders.mapping, ...aiResult.mapping };
     // transform Records
     const transformedRecords = transformRecords(records, finalMapping)
+    // validate Records and separate skipped ones
+    const { valid, skipped } = validateRecords(transformedRecords);
     //batching
-    const batches = createBatches(transformedRecords);
+    const batches = createBatches(valid);
     // AI Records Enrichment
     const enrichedRecords = [];
     for (const batch of batches) {
@@ -27,15 +31,21 @@ export const importLeads = async (buffer) => {
 
       enrichedRecords.push(...enrichedBatch );
     }
-    console.log(enrichedRecords)
+    console.log("Enriched Records:", enrichedRecords);
 
     return {
       success: true,
+      summary: {
+        totalProcessed: records.length,
+        totalImported: enrichedRecords.length,
+        totalSkipped: skipped.length
+      },
       mappedHeaders,
       headerInfo,
       finalMapping,
       transformedRecords,
-      enrichedRecords
+      enrichedRecords,
+      skippedRecords: skipped
     };
 
   } catch (error) {
